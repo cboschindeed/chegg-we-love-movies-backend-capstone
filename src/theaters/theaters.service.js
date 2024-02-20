@@ -8,10 +8,10 @@ const reduceMovies = reduceProperties("theater_id", {
   rating: ["movies", null, "rating"],
   description: ["movies", null, "description"],
   image_url: ["movies", null, "image_url"],
-  created_at: ["movies", null, "created_at"],
-  updated_at: ["movies", null, "updated_at"],
-  is_showing: ["movies", null, "is_showing"],
-  mt_theater_id: ["movies", null, "theater_id"],
+  // created_at: ["movies", null, "created_at"],
+  // updated_at: ["movies", null, "updated_at"],
+  // is_showing: ["movies", null, "is_showing"],
+  // mt_theater_id: ["movies", null, "theater_id"],
 });
 
 async function list() {

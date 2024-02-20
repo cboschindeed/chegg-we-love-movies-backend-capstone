@@ -5,7 +5,7 @@ const methodNotAllowed = require("../errors/methodNotAllowed");
 // Theaters routes
 router
   .route("/")
-  .get(controller.listTheatersForMovie)
+  //   .get(controller.listTheatersForMovie)
   .get(controller.list)
   .all(methodNotAllowed);
 
