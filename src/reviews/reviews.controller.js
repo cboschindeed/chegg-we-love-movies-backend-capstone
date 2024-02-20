@@ -1,5 +1,4 @@
 const service = require("./reviews.service");
-const moviesService = require("../movies/movies.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 
@@ -52,7 +51,7 @@ async function update(request, response) {
 async function listReviewsForMovie(request, response) {
   const { movieId } = request.params;
 
-  const reviews = await moviesService.listReviewsForMovie(movieId);
+  const reviews = await service.listReviewsForMovie(movieId);
   response.json({ data: reviews });
 }
 
