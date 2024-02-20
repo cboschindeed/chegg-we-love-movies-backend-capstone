@@ -3,16 +3,15 @@ const db = require("../db/connection");
 const tableName = "reviews";
 
 async function destroy(reviewId) {
-  // TODO: Write your code here
-  return db("reviews").where({ review_id: reviewId }).del();
+  return db(tableName).where({ review_id: reviewId }).del();
 }
 
 async function list(movie_id) {
-  // TODO: Write your code here
+  return db("reviews").select("*").where({ movie_id: movieId });
 }
 
 async function read(reviewId) {
-  // TODO: Write your code here
+  return db(tableName).select("*").where({ review_id: reviewId }).first();
 }
 
 async function readCritic(critic_id) {

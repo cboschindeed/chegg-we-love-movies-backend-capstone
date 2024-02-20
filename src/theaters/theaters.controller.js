@@ -3,8 +3,8 @@ const moviesService = require("../movies/movies.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 async function list(request, response) {
-  // TODO: Add your code here
-  response.json({});
+  const theaters = await service.list();
+  response.json({ data: theaters });
 }
 
 async function listTheatersForMovie(request, response) {
@@ -14,9 +14,9 @@ async function listTheatersForMovie(request, response) {
   response.json({ data: theaters });
 }
 
-module.exports = {
-  listTheatersForMovie: [asyncErrorBoundary(listTheatersForMovie)],
-};
+// module.exports = {
+//   listTheatersForMovie: [asyncErrorBoundary(listTheatersForMovie)],
+// };
 
 module.exports = {
   list: asyncErrorBoundary(list),
